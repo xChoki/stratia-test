@@ -23,7 +23,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# PostgreSQL driver
 gem 'pg', '~> 1.5', '>= 1.5.6'
+
+# Devise for authentication
+gem 'devise', '~> 4.9', '>= 4.9.4'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
