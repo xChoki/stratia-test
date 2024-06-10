@@ -29,6 +29,8 @@ gem 'pg', '~> 1.5', '>= 1.5.6'
 # Devise for authentication
 gem 'devise', '~> 4.9', '>= 4.9.4'
 
+gem 'friendly_id', '~> 5.5.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
