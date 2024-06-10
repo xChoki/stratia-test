@@ -2,8 +2,9 @@
 <% if user_signed_in? %>
   <!-- Show the user's projects -->
   <% @projects.each do |project| %>
-    <!-- Add your code to display the project details here -->
+    <!-- Project title -->
     <p><%= project.title %></p>
+    <!-- Link to the project -->
     <p><%= link_to "Show this project", project %></p>
   <% end %>
 <% end %>
