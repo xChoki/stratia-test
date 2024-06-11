@@ -4,7 +4,7 @@
     <div class="mt-4">
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
-        <div class="flex gap-4 items-center">
+        <div class="md:flex gap-4 items-center">
           <%= f.label :email %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "rounded-md" %>
         </div>
