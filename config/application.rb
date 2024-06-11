@@ -23,5 +23,13 @@ module StratiaTest
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    #
+    # List the available locales
+    I18n.available_locales = [:en, :es]
+
+    # Set default locale
+    I18n.default_locale = :es
+
+    config.middleware.use Rack::MethodOverride
   end
 end

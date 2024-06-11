@@ -28,4 +28,5 @@
 #       enabled: "ON"
 
 en:
+  language_name: "English"
   hello: "Hello world"

@@ -5,3 +5,6 @@
   <%= link_to "Sign up", new_user_registration_path %>
   <%= link_to "Log in", new_user_session_path %>
 <% end %>
+<%= form_with url: set_locale_path, method: :post, local: true do |form| %>
+  <%= form.select :locale, options_for_select(I18n.available_locales.map { |locale| [I18n.t("language_name", locale: locale), locale] }, I18n.locale), {}, { onchange: 'this.form.submit()' } %>
+<% end %>
