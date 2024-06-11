@@ -13,8 +13,10 @@
   <body class="bg-gray-100 mx-auto">
     <!-- This file lives in app/views/layouts/_navbar.html.erb -->
     <%= render "layouts/navbar" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <section class="flex flex-col items-center max-w-xl mx-auto">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </section>
     <%= yield %>
   </body>
 </html>
