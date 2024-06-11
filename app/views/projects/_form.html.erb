@@ -13,15 +13,15 @@
     <%# form.label :user_id, style: "display: block" %>
     <%= form.number_field :user_id, value: current_user.id, style: "display: none" %>
   </div>
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+  <div class="md:flex gap-4 items-center">
+    <%= form.label :title, style: "display: block", class: "w-full"  %>
+    <%= form.text_field :title, class: "rounded-md" %>
   </div>
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class="md:flex gap-4 items-center mt-2">
+    <%= form.label :description, style: "display: block", class: "w-full"  %>
+    <%= form.text_field :description, class: "rounded-md" %>
   </div>
-  <div>
-    <%= form.submit %>
+  <div class="mt-4 flex justify-center">
+    <%= form.submit "Submit", class:"bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded hover:cursor-pointer" %>
   </div>
 <% end %>

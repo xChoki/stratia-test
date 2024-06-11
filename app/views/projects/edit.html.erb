@@ -1,10 +1,12 @@
-<h1>Editing project</h1>
-
-<%= render "form", project: @project %>
-
-<br>
-
-<div>
-  <%= link_to "Show this project", @project %> |
-  <%= link_to "Back to projects", projects_path %>
-</div>
+<section class="mt-5">
+  <h1 class="text-center text-semibold text-xl">Editing project</h1>
+  <section class="flex justify-center items-center">
+    <div class="mt-4">
+      <%= render "form", project: @project %>
+    </div>
+  </section>
+  <div class="flex text-cyan-700 justify-center mt-4 gap-2">
+    <%= link_to "Show this project", @project, class:"text-cyan-500 hover:text-cyan-600 hover:bg-gray-200 p-2 rounded-md"  %>
+    <%= link_to "Back to projects", projects_path, class:"text-cyan-500 hover:text-cyan-600 hover:bg-gray-200 p-2 rounded-md"  %>
+  </div>
+</section>
