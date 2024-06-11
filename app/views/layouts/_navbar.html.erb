@@ -1,7 +1,22 @@
-<%= stylesheet_link_tag "navbar" %>
-<% if user_signed_in? %>
-  <%= link_to "Log out", destroy_user_session_path, data: { turbolinks: false } %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, data: { turbolinks: false } %>
-  <%= link_to "Log in", new_user_session_path, data: { turbolinks: false } %>
-<% end %>
+<header class="flex bg-gray-200 max-w-xl mx-auto h-16 rounded-md mt-4 items-center justify-end">
+  <% if user_signed_in? %>
+    <nav class="mr-4">
+      <ol class="list-none flex">
+        <li class="p-2 hover:bg-gray-300 rounded-md">
+          <%= link_to "Log out", destroy_user_session_path, data: { turbolinks: false } %>
+        </li>
+      </ol>
+    </nav>
+  <% else %>
+    <nav class="mr-4">
+      <ol class="list-none flex gap-4">
+        <li class="p-2 hover:bg-gray-300 rounded-md">
+          <%= link_to "Sign up", new_user_registration_path, data: { turbolinks: false } %>
+        </li>
+        <li class="p-2 hover:bg-gray-300 rounded-md">
+          <%= link_to "Log in", new_user_session_path, data: { turbolinks: false } %>
+        </li>
+      </ol>
+    </nav>
+  <% end %>
+</header>

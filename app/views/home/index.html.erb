@@ -1,10 +1,12 @@
-<%= link_to "New Project", new_project_path %>
-<% if user_signed_in? %>
-  <!-- Show the user's projects -->
-  <% @projects.each do |project| %>
-    <!-- Project title -->
-    <p><%= project.title %></p>
-    <!-- Link to the project -->
-    <p><%= link_to "Show this project", project %></p>
+<section>
+  <%= link_to "New Project", new_project_path %>
+  <% if user_signed_in? %>
+    <!-- Show the user's projects -->
+    <% @projects.each do |project| %>
+      <!-- Project title -->
+      <p><%= project.title %></p>
+      <!-- Link to the project -->
+      <p><%= link_to "Show this project", project %></p>
+    <% end %>
   <% end %>
-<% end %>
+</section>
