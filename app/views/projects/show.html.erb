@@ -5,7 +5,16 @@
     <div>
       <%= link_to "Edit this project", edit_project_path(@project) %> |
       <%= link_to "Back to projects", projects_path %>
+      <%= link_to "New task", new_project_task_path(@project) %>
       <%= button_to "Destroy this project", @project, method: :delete %>
     </div>
+    <% @project.tasks.each do |task| %>
+      <li>
+        <%= task.title%>
+      </li>
+      <li><%= task.description%></li>
+      <li><%= task.completed%></li>
+      <li><%= link_to "Edit this task", edit_project_task_path(@project, task) %></li>
+    <% end %>
   <% end %>
 <% end %>
