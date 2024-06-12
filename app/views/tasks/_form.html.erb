@@ -1,0 +1,30 @@
+<%= form_with(model: [@project, @task]) do |form| %>
+  <%= form.hidden_field :project_slug, value: @project.slug %>
+  <% if task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="md:flex gap-4 items-center">
+    <%= form.label :title, style: "display: block", class: "w-full"  %>
+    <%= form.text_field :title, class: "rounded-md" %>
+  </div>
+  <div class="md:flex gap-4 items-center mt-2">
+    <%= form.label :description, style: "display: block", class: "w-full"  %>
+    <%= form.text_field :description, class: "rounded-md" %>
+  </div>
+  <div class="flex gap-4 items-center mt-2">
+    <%= form.label :completed, style: "display: block" %>
+    <div class="flex items-center">
+      <%= form.check_box :completed, class: "rounded-sm" %>
+    </div>
+  </div>
+  <div class="mt-4 flex justify-center">
+    <%= form.submit "Submit", class:"bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded hover:cursor-pointer" %>
+  </div>
+<% end %>
